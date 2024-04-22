@@ -1,0 +1,6 @@
+openai
+retry
+streamlit
+streamlit_chat
+neo4j
+langchain

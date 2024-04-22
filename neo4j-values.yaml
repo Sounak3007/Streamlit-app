@@ -1,0 +1,21 @@
+neo4j:
+  name: neo4j-kubernetes
+  resources:
+    cpu: 1500m
+    memory: "5Gi"
+
+  # Uncomment to set the initial password
+  password: "password"
+
+  # Uncomment to use enterprise edition
+  #edition: "enterprise"
+  #acceptLicenseAgreement: "yes"
+env:
+  NEO4J_PLUGINS: '["apoc"]'
+  
+volumes:
+  data:
+    mode: defaultStorageClass
+config:
+  dbms.security.procedures.unrestricted: "apoc.*"
+
